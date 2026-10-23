@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Discovery App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="brand">🎬 Movie Discovery</a>
+
+            <button id="theme-toggle" class="theme-toggle" type="button">
+                <span id="theme-icon">🌙</span>
+                <span id="theme-text">Chế độ tối</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN LAYOUT -->
+    <main class="container">
+        <div class="app-layout">
+
+            <!-- SIDEBAR: SEARCH + FILTERS -->
+            <aside class="sidebar">
+                <section class="sidebar-section">
+                    <h2>Tìm kiếm</h2>
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Nhập tên phim..."
+                        autocomplete="off"
+                    >
+                </section>
+
+                <section class="sidebar-section">
+                    <h2>Thể loại phim</h2>
+                    <div id="genres-container" class="genres-container">
+                        <!-- JavaScript tạo checkbox tại đây -->
+                    </div>
+                </section>
+
+                <button
+                    type="button"
+                    class="reset-button"
+                    onclick="location.reload()"
+                >
+                    Làm mới bộ lọc
+                </button>
+
+                <nav class="assignment-links">
+                    <h2>Bài tập liên quan</h2>
+                    <a href="#" target="_blank">Bài tập 37</a>
+                    <a href="#" target="_blank">Bài tập 38</a>
+                    <a href="https://nguyenthingochau.github.io/baitap39/bt39.html" target="_blank">Bài tập 39</a>
+                </nav>
+            </aside>
+
+            <!-- MAIN CONTENT: MOVIES -->
+            <section class="movies-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">KHÁM PHÁ ĐIỆN ẢNH</p>
+                        <h1>Danh sách phim</h1>
+                        <p class="section-description">
+                            Tìm kiếm và khám phá những bộ phim yêu thích của bạn.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="movies-grid" class="movies-grid">
+                    <!-- JavaScript hiển thị thẻ phim tại đây -->
+                </div>
+
+                <p id="no-results" class="no-results hidden">
+                    Không tìm thấy phim phù hợp.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Movie Discovery App © 2026</p>
+    </footer>
+
+    <!-- MOVIE DETAIL MODAL -->
+    <div id="movie-modal" class="modal hidden">
+        <div id="modal-overlay" class="modal-overlay"></div>
+
+        <div
+            class="modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Chi tiết phim"
+        >
+            <button
+                id="modal-close"
+                class="modal-close"
+                type="button"
+                aria-label="Đóng"
+            >&times;</button>
+
+            <div id="modal-body" class="modal-body">
+                <!-- JavaScript hiển thị chi tiết phim tại đây -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
